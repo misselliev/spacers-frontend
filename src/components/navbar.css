@@ -1,0 +1,12 @@
+.ui.menu {
+  background-color: #e5d9f2 !important;
+}
+
+nav a {
+  color: #7371fc;
+  font-weight: bolder;
+}
+
+.ui.item.menu .item {
+  cursor: pointer;
+}

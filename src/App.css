@@ -1,3 +1,13 @@
 .App {
   text-align: center;
 }
+
+a:hover {
+  color: #4e4bfb;
+}
+
+#root {
+  background: url('https://images.unsplash.com/photo-1515549832467-8783363e19b6?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1482&q=80') center center;
+  background-size: cover;
+  height: 110% !important;
+}

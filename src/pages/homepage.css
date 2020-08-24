@@ -1,0 +1,54 @@
+.home-grid {
+  margin-top: 1em !important;
+}
+
+.home-text {
+  font-size: 1.5em;
+  color: #565656;
+  text-shadow: 2px 2px 4px grey;
+  font-style: italic;
+  text-align: center;
+  margin-top: 1em;
+  margin-bottom: 1em;
+}
+
+.home-buttons-container {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 30vh;
+}
+
+.home-button {
+  background-color: #a594f9 !important;
+  padding: 1.5em !important;
+}
+
+.home-button:hover {
+  background-color: #7371fc !important;
+}
+
+.home-button a {
+  color: white;
+  text-decoration: none;
+}
+
+.home-image {
+  height: 50%;
+  width: 100%;
+  max-width: 720px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.home-title {
+  margin-top: 1em;
+}
+
+.home-p {
+  margin-top: 10vh;
+}
+
+.home-link {
+  color: white;
+}
