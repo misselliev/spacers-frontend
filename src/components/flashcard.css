@@ -1,19 +1,31 @@
 #card {
-    margin: 10vh auto;
-    width: 33%;
+  margin: 30vh auto 0 auto;
+  width: 50%;
 }
+
 .flip-card-front {
-    margin-top: 10px;
+  margin-top: 10px;
+  word-wrap: break-word;
+  width: 100% !important;
 }
 
 .flip-card-back {
-    top: -30vh!important;
+  top: -30vh !important;
+  word-wrap: break-word;
+  width: 100%;
+  position: absolute !important;
 }
 
 .on {
-    visibility: visible!important;
+  visibility: visible !important;
 }
 
 .off {
-    visibility: hidden!important;
+  visibility: hidden !important;
+}
+
+.nav-buttons {
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 1em;
 }
