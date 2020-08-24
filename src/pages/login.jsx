@@ -26,49 +26,49 @@ const LoginPage = props => {
   const { email, password } = loginForm;
 
   return (
-      <Grid textAlign="center" className="middle aligned wall login">
-        <Grid.Column className="login-column">
-          <Header as="h2" className="login-header" textAlign="center">
-            <Icon name="sticky note" />
-            Log-in
-          </Header>
-          <Form className="loginForm" size="large" onSubmit={handleSubmit}>
-            <Segment stacked>
-              <Form.Input
-                id="form-input-control-email"
-                fluid
-                icon="user"
-                iconPosition="left"
-                type="text"
-                name="email"
-                value={email}
-                onChange={handleChange}
-                placeholder="Email"
-                label="Email"
-                className="login-input"
-                required
-              />
-              <Form.Input
-                id="form-input-control-password"
-                fluid
-                icon="lock"
-                iconPosition="left"
-                type="password"
-                name="password"
-                value={password}
-                onChange={handleChange}
-                placeholder="Password"
-                label="Password"
-                className="login-input"
-                required
-              />
-              <Button color="green" className="login-button" fluid size="large" type="submit">
-                Login
-              </Button>
-            </Segment>
-          </Form>
-        </Grid.Column>
-      </Grid>
+    <Grid textAlign="center" className="middle aligned wall login">
+      <Grid.Column className="login-column">
+        <Header as="h2" className="login-header" textAlign="center">
+          <Icon name="sticky note" />
+          Log-in
+        </Header>
+        <Form className="loginForm" size="large" onSubmit={handleSubmit}>
+          <Segment stacked>
+            <Form.Input
+              id="form-input-control-email"
+              fluid
+              icon="user"
+              iconPosition="left"
+              type="text"
+              name="email"
+              value={email}
+              onChange={handleChange}
+              placeholder="Email"
+              label="Email"
+              className="login-input"
+              required
+            />
+            <Form.Input
+              id="form-input-control-password"
+              fluid
+              icon="lock"
+              iconPosition="left"
+              type="password"
+              name="password"
+              value={password}
+              onChange={handleChange}
+              placeholder="Password"
+              label="Password"
+              className="login-input"
+              required
+            />
+            <Button color="green" className="login-button" fluid size="large" type="submit">
+              Login
+            </Button>
+          </Segment>
+        </Form>
+      </Grid.Column>
+    </Grid>
   );
 };
 
