@@ -2,7 +2,7 @@
 .scene {
   width: 50%;
   height: 200px;
-  border: 1px solid #CCC;
+  border: 1px solid #ccc;
   margin: 40px auto;
   perspective: 600px;
 }
@@ -34,7 +34,7 @@
   backface-visibility: hidden;
 }
 
-.card-face h3{
+.card-face h3 {
   margin: 30px 10px;
 }
 
