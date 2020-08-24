@@ -26,7 +26,6 @@ const LoginPage = props => {
   const { email, password } = loginForm;
 
   return (
-    <div className="ui container">
       <Grid textAlign="center" className="middle aligned wall login">
         <Grid.Column className="login-column">
           <Header as="h2" className="login-header" textAlign="center">
@@ -47,6 +46,7 @@ const LoginPage = props => {
                 placeholder="Email"
                 label="Email"
                 className="login-input"
+                required
               />
               <Form.Input
                 id="form-input-control-password"
@@ -60,15 +60,15 @@ const LoginPage = props => {
                 placeholder="Password"
                 label="Password"
                 className="login-input"
+                required
               />
-              <Button className="login-button" fluid size="large" type="submit">
+              <Button color="green" className="login-button" fluid size="large" type="submit">
                 Login
               </Button>
             </Segment>
           </Form>
         </Grid.Column>
       </Grid>
-    </div>
   );
 };
 

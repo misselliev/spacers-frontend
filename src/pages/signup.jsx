@@ -81,7 +81,7 @@ const SignupPage = props => {
               style={{ marginBottom: '1em' }}
               required
             />
-            <Button style={{ backgroundColor: '#5cba57', color: 'white' }} fluid size="large" type="submit">
+            <Button color="green" fluid size="large" type="submit">
               Signup
             </Button>
           </Segment>
