@@ -6,6 +6,7 @@ import {
   Button, Form, Grid, Header, Segment, Icon,
 } from 'semantic-ui-react';
 import userActions from '../redux/userActions';
+import './signup.css';
 
 const SignupPage = props => {
   const dispatch = useDispatch();
@@ -19,7 +20,7 @@ const SignupPage = props => {
 
   const handleChange = e => setSignupForm({ ...signupForm, [e.target.name]: e.target.value });
 
-  const handleSubmit = (e) => {
+  const handleSubmit = e => {
     e.preventDefault();
     const { history } = props;
     dispatch(userActions.newUser(signupForm));
@@ -36,7 +37,7 @@ const SignupPage = props => {
           <Icon name="user" />
           Create your account
         </Header>
-        <Form size="large" onSubmit={handleSubmit}>
+        <Form className="signupForm" size="large" onSubmit={handleSubmit}>
           <Segment stacked>
             <Form.Input
               id="form-input-control-email"
@@ -50,6 +51,7 @@ const SignupPage = props => {
               placeholder="Email"
               label="Email"
               style={{ marginBottom: '1em' }}
+              required
             />
             <Form.Input
               id="form-input-control-password"
@@ -63,6 +65,7 @@ const SignupPage = props => {
               placeholder="Password"
               label="Password"
               style={{ marginBottom: '1em' }}
+              required
             />
             <Form.Input
               id="form-input-control-password-confirmation"
@@ -76,6 +79,7 @@ const SignupPage = props => {
               placeholder="Password confirmation"
               label="Password confirmation"
               style={{ marginBottom: '1em' }}
+              required
             />
             <Button style={{ backgroundColor: '#5cba57', color: 'white' }} fluid size="large" type="submit">
               Signup
