@@ -1,31 +1,58 @@
-#card {
-  margin: 30vh auto 0 auto;
+
+.scene {
   width: 50%;
+  height: 200px;
+  border: 1px solid #ccc;
+  margin: 40px auto;
+  perspective: 600px;
 }
 
-.flip-card-front {
-  margin-top: 10px;
-  word-wrap: break-word;
-  width: 100% !important;
-}
-
-.flip-card-back {
-  top: -30vh !important;
-  word-wrap: break-word;
+.card {
+  position: relative;
   width: 100%;
-  position: absolute !important;
+  height: 100%;
+  cursor: pointer;
+  transform-style: preserve-3d;
+  transform-origin: center right;
+  transition: transform 1s;
 }
 
-.on {
-  visibility: visible !important;
+.card.is-flipped {
+  transform: translateX(-100%) rotateY(-180deg);
 }
 
-.off {
-  visibility: hidden !important;
+.card-face {
+  overflow: hidden;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  line-height: 260px;
+  color: black;
+  text-align: center;
+  font-weight: bold;
+  font-size: 40px;
+  backface-visibility: hidden;
 }
 
-.nav-buttons {
-  display: flex;
-  justify-content: space-around;
-  margin-bottom: 1em;
+.card-face h3 {
+  margin: 30px 10px;
+}
+
+.card-face-front {
+  background: #f9f6ee;
+}
+
+.card-face-back {
+  background: #fff6f6;
+  transform: rotateY(180deg);
+}
+
+.flashcardButton {
+  margin: auto;
+  color: black;
+  width: 45px;
+  font-size: 14px;
+  border-radius: 3px;
+  border: black solid 1px;
+  padding: 4px 1px;
 }
