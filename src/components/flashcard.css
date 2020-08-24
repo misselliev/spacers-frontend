@@ -1,0 +1,19 @@
+#card {
+    margin: 10vh auto;
+    width: 33%;
+}
+.flip-card-front {
+    margin-top: 10px;
+}
+
+.flip-card-back {
+    top: -30vh!important;
+}
+
+.on {
+    visibility: visible!important;
+}
+
+.off {
+    visibility: hidden!important;
+}
