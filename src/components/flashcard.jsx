@@ -7,7 +7,7 @@ import '../styles/flashcard.css';
 
 const Flashcard = ({ id, question, answer }) => {
   useEffect(() => {
-    const card = document.getElementById('card');
+    const card = document.getElementById(id);
     card.addEventListener('click', () => {
       card.classList.toggle('is-flipped');
     });
@@ -17,7 +17,7 @@ const Flashcard = ({ id, question, answer }) => {
     <div className="main-card" key={id}>
       <h3 className="main-text">Question of the day</h3>
       <div className="scene scene-card">
-        <div id="card" className="card">
+        <div id={id} className="card">
           <div className="card-face card-face-front">
             <h3>
               {question}
