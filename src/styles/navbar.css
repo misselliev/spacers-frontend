@@ -2,7 +2,8 @@
   background-color: #e5d9f2 !important;
 }
 
-nav a {
+nav a,
+#dropdown-menu {
   color: #7371fc;
   font-weight: bolder;
 }
