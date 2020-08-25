@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react';
 import {
- Button, Icon,
+  Button, Icon,
 } from 'semantic-ui-react';
 import PropTypes from 'prop-types';
 import '../styles/flashcard.css';
@@ -49,7 +49,7 @@ const Flashcard = ({ id, question, answer }) => {
 };
 
 Flashcard.propTypes = {
-  id: PropTypes.number.isRequired,
+  id: PropTypes.string.isRequired,
   question: PropTypes.string.isRequired,
   answer: PropTypes.string.isRequired,
 };

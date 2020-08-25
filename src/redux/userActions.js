@@ -15,7 +15,8 @@ const registerUser = userObj => ({
 });
 
 const loginUser = userObj => dispatch => {
-  axios.post('https://localhost:3001', userObj).then(res => {
+  axios.post('https://spacer-repetition-api.herokuapp.com/v1/login', userObj).then(res => {
+    console.log(res);
     dispatch(setUser(res.data.data));
     localStorage.setItem('user', JSON.stringify(res.headers));
   }).catch(error => {
@@ -25,13 +26,13 @@ const loginUser = userObj => dispatch => {
 
 const logoutUser = () => dispatch => {
   const headers = JSON.parse(localStorage.user);
-  axios.delete('https://localhost:3001', { headers });
+  axios.delete('https://spacer-repetition-api.herokuapp.com/v1/', { headers });
   dispatch(clearUser());
   localStorage.clear();
 };
 
 const newUser = userObj => dispatch => {
-  axios.post('https://localhost:3001', userObj).then(res => {
+  axios.post('https://spacer-repetition-api.herokuapp.com/v1/', userObj).then(res => {
     dispatch(registerUser(res.data.data));
   }).catch(error => {
     throw (error);

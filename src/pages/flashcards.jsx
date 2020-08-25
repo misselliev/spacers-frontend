@@ -16,6 +16,10 @@ const NewFlashcard = () => {
     dispatch(flashcardActions.fetchCards());
   }, [dispatch]);
 
+  // const flashcards = [
+  //   { id: '2', question: 'who is a good boy', answer: 'all dogs are good boys' },
+  //   { id: '3', question: 'who is a good boy', answer: 'all dogs are good boys' },
+  // ];
   return (
     <Container>
       <Grid textAlign="center" className="middle aligned wall login">
