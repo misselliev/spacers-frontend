@@ -1,6 +1,7 @@
 export default (state = {}, { type, payload }) => {
   switch (type) {
     case 'LOGIN_USER':
+      console.log('loggin in',payload);
       return { ...state, currentUser: payload };
     case 'NEW_USER':
       return state;
