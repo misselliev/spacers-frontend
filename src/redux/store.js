@@ -6,6 +6,7 @@ const composeEnhancer = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
 
 const initState = {
   user: {},
+  flashcards: { flashcards: [] },
 };
 const store = createStore(rootReducer, initState, composeEnhancer(applyMiddleware(thunk)));
 
