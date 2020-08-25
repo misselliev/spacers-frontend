@@ -1,14 +1,22 @@
 import React from 'react';
-// import { useDispatch } from 'react-redux';
+import { useDispatch, useSelector, shallowEqual } from 'react-redux';
 import {
   Button, Form, Grid, Header, Segment, Container,
 } from 'semantic-ui-react';
-// import userActions from '../redux/userActions';
+import flashcardActions from '../redux/flashcardActions';
 import '../styles/newflashcard.css';
 
 const CreateFlashcardPage = () => {
+  const flashcard = useSelector(state => state.flashcards, shallowEqual) || [];
+  const dispatch = useDispatch();
+
+  // useEffect(() => {
+  //   dispatch(flashcardActions.SaveFlashcard(flashcard));
+  // }, [dispatch, flashcard]);
+
   const handleSubmit = e => {
     e.preventDefault();
+    dispatch(flashcardActions.SaveFlashcard(flashcard));
   };
   return (
     <Container>
