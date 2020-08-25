@@ -6,7 +6,7 @@ import {
   Button, Form, Grid, Header, Segment, Icon,
 } from 'semantic-ui-react';
 import userActions from '../redux/userActions';
-import './signup.css';
+import '../styles/signup.css';
 
 const SignupPage = props => {
   const dispatch = useDispatch();

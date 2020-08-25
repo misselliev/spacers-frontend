@@ -2,7 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { useSelector } from 'react-redux';
 import { Grid, Button } from 'semantic-ui-react';
-import './homepage.css';
+import '../styles/homepage.css';
 
 const HomePage = () => {
   const user = useSelector(state => state.user);

@@ -2,7 +2,7 @@ import React, { useEffect } from 'react';
 import {
   Segment, Button, Icon, Grid, Container,
 } from 'semantic-ui-react';
-import './flashcard.css';
+import '../styles/flashcard.css';
 
 const Flashcard = () => {
   useEffect(() => {
