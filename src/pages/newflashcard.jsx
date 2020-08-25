@@ -1,5 +1,5 @@
-import React from 'react';
-import { useDispatch, useSelector, shallowEqual } from 'react-redux';
+import React, { useState } from 'react';
+import { useDispatch } from 'react-redux';
 import {
   Button, Form, Grid, Header, Segment, Container,
 } from 'semantic-ui-react';
@@ -7,16 +7,19 @@ import flashcardActions from '../redux/flashcardActions';
 import '../styles/newflashcard.css';
 
 const CreateFlashcardPage = () => {
-  const flashcard = useSelector(state => state.flashcards, shallowEqual) || [];
+  const [flashcard, setFlashcard] = useState({
+    front: '',
+    back: '',
+  });
   const dispatch = useDispatch();
-
-  // useEffect(() => {
-  //   dispatch(flashcardActions.SaveFlashcard(flashcard));
-  // }, [dispatch, flashcard]);
+  const handleChange = e => setFlashcard({ ...flashcard, [e.target.name]: e.target.value });
+  const { front, back } = flashcard;
 
   const handleSubmit = e => {
     e.preventDefault();
-    dispatch(flashcardActions.SaveFlashcard(flashcard));
+    const result = [];
+    result.push(flashcard);
+    dispatch(flashcardActions.SaveFlashcard(result));
   };
   return (
     <Container>
@@ -30,26 +33,14 @@ const CreateFlashcardPage = () => {
               <Form.Input
                 id="form-input-control-email"
                 fluid
-                type="text"
-                name="text"
-                value="Theme"
-                // onChange={handleChange}
-                placeholder="Theme"
-                label="Theme"
-                // className="login-input"
-                required
-              />
-              <Form.Input
-                id="form-input-control-email"
-                fluid
                 icon="sticky note outline"
                 iconPosition="left"
                 type="text"
-                name="text"
-                // onChange={handleChange}
+                name="front"
+                value={front}
+                onChange={handleChange}
                 placeholder="Front"
                 label="Front"
-                // className="login-input"
                 required
               />
               <Form.Input
@@ -58,18 +49,15 @@ const CreateFlashcardPage = () => {
                 icon="sticky note"
                 iconPosition="left"
                 type="text"
-                name="text"
-                // onChange={handleChange}
+                name="back"
+                value={back}
+                onChange={handleChange}
                 placeholder="Back"
                 label="Back"
-                // className="login-input"
                 required
               />
-              <Button className="add-button" fluid size="large" type="submit">
+              <Button className="form-button" fluid size="large" type="submit">
                 Add
-              </Button>
-              <Button className="finish-button" fluid size="large" type="submit">
-                Finish
               </Button>
             </Segment>
           </Form>

@@ -15,9 +15,7 @@ const registerUser = userObj => ({
 });
 
 const loginUser = userObj => dispatch => {
-  console.log('loginuser action',userObj);
   axios.post('https://spacer-repetition-api.herokuapp.com/v1/login', userObj).then(res => {
-    console.log(res);
     dispatch(setUser(res.data));
     localStorage.setItem('user', JSON.stringify(res.data));
   }).catch(error => {
