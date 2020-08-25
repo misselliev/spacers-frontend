@@ -5,7 +5,7 @@ import {
   Button, Form, Grid, Header, Segment,
 } from 'semantic-ui-react';
 // import userActions from '../redux/userActions';
-import '../styles/login.css';
+import '../styles/newflashcard.css';
 
 const CreateFlashcardPage = () => {
   const handleSubmit = e => {
@@ -59,6 +59,9 @@ const CreateFlashcardPage = () => {
             />
             <Button className="add-button" fluid size="large" type="submit">
               Add
+            </Button>
+            <Button className="finish-button" fluid size="large" type="submit">
+              Finish
             </Button>
           </Segment>
         </Form>
