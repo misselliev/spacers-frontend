@@ -28,7 +28,7 @@ const LoginPage = props => {
   return (
     <Grid textAlign="center" className="middle aligned wall login">
       <Grid.Column className="login-column">
-        <Header as="h2" className="login-header" textAlign="center">
+        <Header as="h2" className="main-text" textAlign="center">
           <Icon name="sticky note" />
           Log-in
         </Header>
@@ -62,7 +62,7 @@ const LoginPage = props => {
               className="login-input"
               required
             />
-            <Button color="green" className="login-button" fluid size="large" type="submit">
+            <Button className="form-button" fluid size="large" type="submit">
               Login
             </Button>
           </Segment>

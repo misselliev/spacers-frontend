@@ -10,3 +10,7 @@ nav a {
 .ui.item.menu .item {
   cursor: pointer;
 }
+
+nav a:hover {
+  color: #4e4bfb;
+}

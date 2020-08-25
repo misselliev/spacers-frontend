@@ -33,7 +33,7 @@ const SignupPage = props => {
   return (
     <Grid textAlign="center" className="middle aligned wall signup">
       <Grid.Column className="signup-column">
-        <Header as="h2" className="signup-header" textAlign="center">
+        <Header as="h2" className="main-text" textAlign="center">
           <Icon name="user" />
           Create your account
         </Header>
@@ -81,7 +81,7 @@ const SignupPage = props => {
               style={{ marginBottom: '1em' }}
               required
             />
-            <Button color="green" fluid size="large" type="submit">
+            <Button className="form-button" fluid size="large" type="submit">
               Signup
             </Button>
           </Segment>

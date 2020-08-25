@@ -56,3 +56,8 @@
   border: black solid 1px;
   padding: 4px 1px;
 }
+
+.nav-buttons {
+  display: flex;
+  justify-content: space-around;
+}

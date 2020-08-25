@@ -20,7 +20,7 @@ const HomePage = () => {
   ) : (
 
     <Grid>
-      <div className="home-text">
+      <div className="main-text">
         <h1 className="home-title">Welcome to Spacers App!</h1>
         <h3>Making learning easier</h3>
         <h3>Please login or sign up</h3>
