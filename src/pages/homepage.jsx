@@ -16,8 +16,8 @@ const HomePage = () => {
           Welcome back!
         </h1>
         <img src="https://images.unsplash.com/photo-1506784365847-bbad939e9335?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1496&q=80" alt="calendar-img" className="home-image" />
-        <Button color="green">Create a new flashcard</Button>
-        <Button color="green">See all my flashcards</Button>
+        <Button color="green"><Link to="/newflashcard">Create a new flashcard</Link></Button>
+        <Button color="green"><Link to="/flashcards">See all my flashcards</Link></Button>
       </div>
     </div>
   ) : (

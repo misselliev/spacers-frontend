@@ -11,7 +11,7 @@ const Flashcard = ({ id, question, answer }) => {
     card.addEventListener('click', () => {
       card.classList.toggle('is-flipped');
     });
-  }, []);
+  }, [id]);
 
   return (
     <div className="main-card" key={id}>

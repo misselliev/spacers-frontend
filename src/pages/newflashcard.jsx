@@ -5,6 +5,7 @@ import {
 } from 'semantic-ui-react';
 import flashcardActions from '../redux/flashcardActions';
 import '../styles/newflashcard.css';
+import Navbar from '../components/navbar';
 
 const CreateFlashcardPage = () => {
   const [flashcard, setFlashcard] = useState({
@@ -23,6 +24,7 @@ const CreateFlashcardPage = () => {
   };
   return (
     <Container>
+      <Navbar />
       <Grid textAlign="center" className="middle aligned wall login">
         <Grid.Column className="login-column">
           <Header as="h2" className="main-text" textAlign="center">

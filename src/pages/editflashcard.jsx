@@ -3,6 +3,7 @@ import React from 'react';
 import {
   Button, Form, Grid, Header, Segment, Container,
 } from 'semantic-ui-react';
+import Navbar from '../components/navbar';
 // import userActions from '../redux/userActions';
 
 const CreateFlashcardPage = () => {
@@ -11,6 +12,7 @@ const CreateFlashcardPage = () => {
   };
   return (
     <Container>
+      <Navbar />
       <Grid textAlign="center" className="middle aligned wall login">
         <Grid.Column className="login-column">
           <Header as="h2" className="main-text" textAlign="center">
