@@ -7,7 +7,7 @@ import '../styles/homepage.css';
 const HomePage = () => {
   const user = useSelector(state => state.user);
   const greeting = user.currentUser ? (
-    <div>
+    <div className="home-grid">
       <div className="home-text">
         <h1 className="home-title">
           {user.currentUser.username}
@@ -36,7 +36,7 @@ const HomePage = () => {
 
   );
   return (
-    <main className="ui grid column centered home-grid">
+    <main className="ui grid column centered">
       {greeting}
     </main>
 
