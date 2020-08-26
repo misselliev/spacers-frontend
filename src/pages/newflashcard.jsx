@@ -27,13 +27,17 @@ const CreateFlashcardPage = () => {
     progress: undefined,
   });
 
+  const resetingForm = () => {
+    document.getElementById('form-input-front').value = '';
+    document.getElementById('form-input-back').value = '';
+  };
   const handleSubmit = e => {
     e.preventDefault();
     const result = [];
     result.push(flashcard);
     dispatch(flashcardActions.SaveFlashcard(result));
     notify();
-    document.getElementById('createFlashcardForm').reset();
+    resetingForm();
   };
 
   return (
@@ -44,9 +48,9 @@ const CreateFlashcardPage = () => {
             Create flashcard
           </Header>
           <Form id="createFlashcardForm" className="createFlashcardForm" size="large" onSubmit={handleSubmit}>
-            <Segment stacked>
+            <Segment stacked id="form-input">
               <Form.Input
-                id="form-input-control-email"
+                id="form-input-front"
                 fluid
                 icon="sticky note outline"
                 iconPosition="left"
@@ -59,7 +63,7 @@ const CreateFlashcardPage = () => {
                 required
               />
               <Form.Input
-                id="form-input-control-password"
+                id="form-input-back"
                 fluid
                 icon="sticky note"
                 iconPosition="left"
