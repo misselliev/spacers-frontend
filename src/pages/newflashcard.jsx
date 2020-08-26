@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { useDispatch } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
 import {
   Button, Form, Grid, Header, Segment, Container,
 } from 'semantic-ui-react';
@@ -7,12 +7,16 @@ import { ToastContainer, toast } from 'react-toastify';
 import flashcardActions from '../redux/flashcardActions';
 import '../styles/newflashcard.css';
 import 'react-toastify/dist/ReactToastify.css';
+import Navbar from '../components/navbar';
 
 const CreateFlashcardPage = () => {
   const [flashcard, setFlashcard] = useState({
     front: '',
     back: '',
   });
+  const user = useSelector(state => state.user);
+  const nav = Object.keys(user).length === 0 ? (<Navbar />) : <div />;
+
   const dispatch = useDispatch();
   const handleChange = e => setFlashcard({ ...flashcard, [e.target.name]: e.target.value });
   const { front, back } = flashcard;
@@ -42,6 +46,7 @@ const CreateFlashcardPage = () => {
 
   return (
     <Container>
+      {nav}
       <Grid textAlign="center" className="middle aligned wall login">
         <Grid.Column className="login-column">
           <Header as="h2" className="main-text" textAlign="center">
