@@ -1,0 +1,50 @@
+.home-grid {
+  margin-top: 1em !important;
+}
+
+.home-buttons-container {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 30vh;
+}
+
+.home-button {
+  background-color: #a594f9 !important;
+  padding: 1.5em !important;
+}
+
+.home-button:hover {
+  background-color: #7371fc !important;
+}
+
+.home-button a {
+  color: white;
+  text-decoration: none;
+}
+
+.home-image {
+  height: 50%;
+  width: 100%;
+  max-width: 720px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.home-title {
+  margin-top: 1em;
+}
+
+.home-p {
+  margin-top: 10vh;
+}
+
+.home-link {
+  color: white;
+}
+
+.button-box {
+  display: flex;
+  justify-content: space-evenly;
+  margin-top: 2em;
+}

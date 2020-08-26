@@ -1,0 +1,63 @@
+
+.scene {
+  width: 50%;
+  height: 200px;
+  border: 1px solid #ccc;
+  margin: 40px auto;
+  perspective: 600px;
+}
+
+.card {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  cursor: pointer;
+  transform-style: preserve-3d;
+  transform-origin: center right;
+  transition: transform 1s;
+}
+
+.card.is-flipped {
+  transform: translateX(-100%) rotateY(-180deg);
+}
+
+.card-face {
+  overflow: hidden;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  line-height: 260px;
+  color: black;
+  text-align: center;
+  font-weight: bold;
+  font-size: 40px;
+  backface-visibility: hidden;
+}
+
+.card-face h3 {
+  margin: 30px 10px;
+}
+
+.card-face-front {
+  background: #f9f6ee;
+}
+
+.card-face-back {
+  background: #fff6f6;
+  transform: rotateY(180deg);
+}
+
+.flashcardButton {
+  margin: auto;
+  color: black;
+  width: 45px;
+  font-size: 14px;
+  border-radius: 3px;
+  border: black solid 1px;
+  padding: 4px 1px;
+}
+
+.nav-buttons {
+  display: flex;
+  justify-content: space-around;
+}
