@@ -10,6 +10,11 @@ const loadFlashcards = flashcards => ({
   payload: flashcards,
 });
 
+const loadMasteredFlashcards = flashcards => ({
+  type: 'LOAD_MASTERED',
+  payload: flashcards,
+});
+
 const sendFlashcards = flashcards => ({
   type: 'SEND_FLASHCARDS',
   payload: flashcards,
@@ -18,9 +23,7 @@ const sendFlashcards = flashcards => ({
 const SaveFlashcard = flashcard => dispatch => {
   const headers = JSON.parse(localStorage.user);
   axios.post('https://spacer-repetition-api.herokuapp.com/v1/flashcards', flashcard, { headers }).then(res => {
-    if (!res.data === 'error') {
-      dispatch(addFlashcard(res.data));
-    }
+    dispatch(addFlashcard(res.config.data));
   }).catch(error => {
     throw (error);
   });
@@ -30,6 +33,15 @@ const fetchFlashcards = () => dispatch => {
   const headers = JSON.parse(localStorage.user);
   axios.get('https://spacer-repetition-api.herokuapp.com/v1/flashcards?filter=active', { headers }).then(res => {
     dispatch(loadFlashcards(res.data));
+  }).catch(error => {
+    throw (error);
+  });
+};
+
+const fetchMasteredFlashcards = () => dispatch => {
+  const headers = JSON.parse(localStorage.user);
+  axios.get('https://spacer-repetition-api.herokuapp.com/v1/flashcards?filter=mastered', { headers }).then(res => {
+    dispatch(loadMasteredFlashcards(res.data));
   }).catch(error => {
     throw (error);
   });
@@ -48,4 +60,5 @@ export default {
   SaveFlashcard,
   fetchFlashcards,
   SendFlashcards,
+  fetchMasteredFlashcards,
 };

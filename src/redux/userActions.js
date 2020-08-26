@@ -24,8 +24,6 @@ const loginUser = userObj => dispatch => {
 };
 
 const logoutUser = () => dispatch => {
-  const headers = JSON.parse(localStorage.user);
-  axios.delete('https://spacer-repetition-api.herokuapp.com/v1/', { headers });
   dispatch(clearUser());
   localStorage.clear();
 };
