@@ -12,7 +12,17 @@ import 'react-toastify/dist/ReactToastify.css';
 const Flashcard = ({ id, question, answer }) => {
   const dispatch = useDispatch();
 
-  const notify = () => toast('🦄 Awesome!', {
+  const notifyTrue = () => toast('🦄 Awesome!', {
+    position: 'top-right',
+    autoClose: 2000,
+    hideProgressBar: false,
+    closeOnClick: true,
+    pauseOnHover: true,
+    draggable: true,
+    progress: undefined,
+  });
+
+  const notifyFalse = () => toast('🦄 Better luck next time!', {
     position: 'top-right',
     autoClose: 2000,
     hideProgressBar: false,
@@ -34,8 +44,8 @@ const Flashcard = ({ id, question, answer }) => {
     // eslint-disable-next-line quote-props
     dispatch(flashcardActions.SendFlashcards({ flashcards: [{ 'id': id, 'correct': true }] }));
     // eslint-disable-next-line no-restricted-globals
-    location.reload();
-    notify();
+    setTimeout(location.reload(), 5000);
+    notifyTrue();
   };
 
   const handleClickFalse = e => {
@@ -44,7 +54,7 @@ const Flashcard = ({ id, question, answer }) => {
     dispatch(flashcardActions.SendFlashcards({ flashcards: [{ 'id': id, 'correct': false }] }));
     // eslint-disable-next-line no-restricted-globals
     setTimeout(location.reload(), 5000);
-    notify();
+    notifyFalse();
   };
 
   return (
