@@ -6,6 +6,7 @@ import {
 import flashcardActions from '../redux/flashcardActions';
 import Flashcard from '../components/flashcard';
 import Navbar from '../components/navbar';
+import '../styles/flashcards.css';
 
 const NewFlashcard = () => {
   const flashcards = useSelector(state => state.flashcards.flashcards) || {};
@@ -20,7 +21,7 @@ const NewFlashcard = () => {
       <Navbar />
       <Grid textAlign="center" className="middle aligned wall login">
         <Grid.Column className="flashcard-column">
-          <Segment raised>
+          <Segment raised className="flashcard-segment">
             {flashcards.map(({ id, front, back }) => (
               <Flashcard key={id} id={id} question={front} answer={back} />
             ))}

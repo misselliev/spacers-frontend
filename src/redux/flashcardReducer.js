@@ -4,6 +4,8 @@ export default (state = {}, { type, payload }) => {
       return { ...state, flashcards: payload };
     case 'ADD_FLASHCARD':
       return { ...state, flashcards: [...state.flashcards, payload] };
+    case 'SEND_FLASHCARDS':
+      return { ...state, flashcards: payload };
     default:
       return state;
   }

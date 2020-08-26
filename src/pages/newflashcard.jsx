@@ -21,6 +21,7 @@ const CreateFlashcardPage = () => {
     const result = [];
     result.push(flashcard);
     dispatch(flashcardActions.SaveFlashcard(result));
+    document.getElementById('createFlashcardForm').reset();
   };
   return (
     <Container>
@@ -30,7 +31,7 @@ const CreateFlashcardPage = () => {
           <Header as="h2" className="main-text" textAlign="center">
             Create flashcard - theme
           </Header>
-          <Form className="createFlashcardForm" size="large" onSubmit={handleSubmit}>
+          <Form id="createFlashcardForm" className="createFlashcardForm" size="large" onSubmit={handleSubmit}>
             <Segment stacked>
               <Form.Input
                 id="form-input-control-email"
