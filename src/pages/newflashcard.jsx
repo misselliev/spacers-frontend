@@ -3,8 +3,10 @@ import { useDispatch } from 'react-redux';
 import {
   Button, Form, Grid, Header, Segment, Container,
 } from 'semantic-ui-react';
+import { ToastContainer, toast } from 'react-toastify';
 import flashcardActions from '../redux/flashcardActions';
 import '../styles/newflashcard.css';
+import 'react-toastify/dist/ReactToastify.css';
 
 const CreateFlashcardPage = () => {
   const [flashcard, setFlashcard] = useState({
@@ -15,19 +17,31 @@ const CreateFlashcardPage = () => {
   const handleChange = e => setFlashcard({ ...flashcard, [e.target.name]: e.target.value });
   const { front, back } = flashcard;
 
+  const notify = () => toast('🦄 Card Added!', {
+    position: 'top-right',
+    autoClose: 2000,
+    hideProgressBar: false,
+    closeOnClick: true,
+    pauseOnHover: true,
+    draggable: true,
+    progress: undefined,
+  });
+
   const handleSubmit = e => {
     e.preventDefault();
     const result = [];
     result.push(flashcard);
     dispatch(flashcardActions.SaveFlashcard(result));
+    notify();
     document.getElementById('createFlashcardForm').reset();
   };
+
   return (
     <Container>
       <Grid textAlign="center" className="middle aligned wall login">
         <Grid.Column className="login-column">
           <Header as="h2" className="main-text" textAlign="center">
-            Create flashcard - theme
+            Create flashcard
           </Header>
           <Form id="createFlashcardForm" className="createFlashcardForm" size="large" onSubmit={handleSubmit}>
             <Segment stacked>
@@ -61,6 +75,7 @@ const CreateFlashcardPage = () => {
                 Add
               </Button>
             </Segment>
+            <ToastContainer />
           </Form>
         </Grid.Column>
       </Grid>
