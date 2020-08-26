@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react';
 import {
-  Button, Icon,
+  Button, Icon, Divider, Header,
 } from 'semantic-ui-react';
 import { useDispatch } from 'react-redux';
 import PropTypes from 'prop-types';
@@ -12,9 +12,9 @@ import 'react-toastify/dist/ReactToastify.css';
 const Flashcard = ({ id, question, answer }) => {
   const dispatch = useDispatch();
 
-  const notify = () => toast('🦄 Wow so easy!', {
+  const notify = () => toast('🦄 Awesome!', {
     position: 'top-right',
-    autoClose: 5000,
+    autoClose: 2000,
     hideProgressBar: false,
     closeOnClick: true,
     pauseOnHover: true,
@@ -31,7 +31,6 @@ const Flashcard = ({ id, question, answer }) => {
 
   const handleClickTrue = e => {
     e.preventDefault();
-    // console.log(JSON.stringify({ flashcards: [{ 'id': id,'correct': true }] }))
     // eslint-disable-next-line quote-props
     dispatch(flashcardActions.SendFlashcards({ flashcards: [{ 'id': id, 'correct': true }] }));
     // eslint-disable-next-line no-restricted-globals
@@ -41,7 +40,6 @@ const Flashcard = ({ id, question, answer }) => {
 
   const handleClickFalse = e => {
     e.preventDefault();
-    // console.log({ flashcards: [{ 'id': id,'correct': false }] });
     // eslint-disable-next-line quote-props
     dispatch(flashcardActions.SendFlashcards({ flashcards: [{ 'id': id, 'correct': false }] }));
     // eslint-disable-next-line no-restricted-globals
@@ -51,7 +49,14 @@ const Flashcard = ({ id, question, answer }) => {
 
   return (
     <div className="main-card" key={id}>
-      <h3 className="main-text">Question of the day</h3>
+      <Divider horizontal>
+        <Header as="h4">
+          <Icon name="pencil altern" />
+          Question #$
+          {id}
+        </Header>
+      </Divider>
+      {' '}
       <div className="scene scene-card">
         <div id={id} className="card">
           <div className="card-face card-face-front">

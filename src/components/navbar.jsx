@@ -11,7 +11,7 @@ const Navbar = () => (
         <Dropdown.Menu>
           <Dropdown.Item><Link className="nav-link" to="/flashcards">See all Flashcards</Link></Dropdown.Item>
           <Dropdown.Item><Link className="nav-link" to="/newflashcard">Create flashcard</Link></Dropdown.Item>
-          <Dropdown.Item><Link className="nav-link" to="/editflashcard">Edit flashcard</Link></Dropdown.Item>
+          <Dropdown.Item><Link className="nav-link" to="/masteredflashards">Mastered flashcards</Link></Dropdown.Item>
         </Dropdown.Menu>
       </Dropdown>
       <Menu.Item><Link className="nav-link" to="/">Logout</Link></Menu.Item>
