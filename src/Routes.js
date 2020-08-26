@@ -5,7 +5,7 @@ import LoginPage from './pages/login';
 import HomePage from './pages/homepage';
 import NewFlashcard from './pages/newflashcard';
 import Flashcard from './pages/flashcards';
-import FlashcardEdit from './pages/editflashcard';
+import MasteredFlashcardPage from './pages/masteredflashcards';
 
 const Routes = () => (
   <Switch>
@@ -14,7 +14,7 @@ const Routes = () => (
     <Route path="/signup" component={SignupPage} />
     <Route path="/flashcards" component={Flashcard} />
     <Route path="/newflashcard" component={NewFlashcard} />
-    <Route path="/editflashcard" component={FlashcardEdit} />
+    <Route path="/masteredflashcards" component={MasteredFlashcardPage} />
   </Switch>
 );
 

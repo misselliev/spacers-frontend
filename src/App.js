@@ -1,16 +1,25 @@
 import React from 'react';
 import { BrowserRouter as Router } from 'react-router-dom';
+import { useSelector } from 'react-redux';
 import './App.css';
 import Routes from './Routes';
-// import Flashcard from './components/flashcard';
+import Navbar from './components/navbar';
 
-const App = () => (
-  <Router>
-    <div className="App">
-      <Routes />
-      {/* <Flashcard id="2" question="who is a good boy" answer="all dogs are good boys" /> */}
+const App = () => {
+  const user = useSelector(state => state.user);
+  const greeting = user.currentUser ? (
+    <div>
+      <Navbar />
     </div>
-  </Router>
-);
+  ) : null;
+  return (
+    <Router>
+      <div className="App">
+        {greeting}
+        <Routes />
+      </div>
+    </Router>
+  );
+};
 
 export default App;
