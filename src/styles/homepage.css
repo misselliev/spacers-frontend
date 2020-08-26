@@ -1,5 +1,5 @@
 .home-grid {
-  /* margin-top: 0px !important */
+  margin-top: 1em !important;
 }
 
 .home-buttons-container {
@@ -41,4 +41,10 @@
 
 .home-link {
   color: white;
+}
+
+.button-box {
+  display: flex;
+  justify-content: space-evenly;
+  margin-top: 2em;
 }
