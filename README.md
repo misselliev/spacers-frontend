@@ -1,68 +1,85 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+![node](https://img.shields.io/node/v/webpack?style=flat-square)
+![beta development](https://img.shields.io/badge/beta-development-green?style=flat-square)
+![Hireable](https://cdn.rawgit.com/hiendv/hireable/master/styles/default/yes.svg)
 
-## Available Scripts
+# 💻 Spacers flashcard App (BETA)
 
-In the project directory, you can run:
+Helping you remember things easier, one flashcard at a time. Front end for [space-api.](https://github.com/euqueme/spacer-api) 
+Project for Microverse's first Hackathon.
 
-### `yarn start`
+This is a flashcards application that uses the
+[spaced memorization technique](https://en.wikipedia.org/wiki/Spaced_repetition).
 
-Runs the app in the development mode.<br />
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+Welcome!
+![homepage](docs/home.png)<br>
+![homepage-menu](docs/menu.png)<br>
+You can create several cards with concepts you want to master.
+![create-card](docs/create.png)<br>
+And quiz yourself until you do. 
+![question-display](docs/question.png)
 
-The page will reload if you make edits.<br />
-You will also see any lint errors in the console.
+## 🔨 Tools
+- React
+- React-DOM
+- Redux
+- Semantic UI
+- React-Create-App
+- Npm
+- CSS
+- ES6
 
-### `yarn test`
+## ✨ Live Demo
 
-Launches the test runner in the interactive watch mode.<br />
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+You can look at it [here]( https://spacers-rep.netlify.app/).
 
-### `yarn build`
+## 🚀 Getting Started
 
-Builds the app for production to the `build` folder.<br />
-It correctly bundles React in production mode and optimizes the build for the best performance.
+To get a local copy up and running follow these simple example steps.
 
-The build is minified and the filenames include the hashes.<br />
-Your app is ready to be deployed!
+### Requirements
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+- Latest version of **[NodeJS](https://nodejs.org/en/)** _-- (npm included)_.
 
-### `yarn eject`
+### Setup
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+First, clone (or fork) this repository.
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+```sh
+git clone https://github.com/misselliev/spacers-frontend.git && cd spacers-frontend
+```
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+Then, install the dependencies.
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+```sh
+npm install
+```
 
-## Learn More
+Once you are done with the previous steps, open up in your localhost.
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+```sh
+npm run start
+```
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+An special npm script is available for linting, using Eslint and Stylelint. 
 
-### Code Splitting
+```sh
+npm run lint
+```
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
+## 👤 Contributors
+- [misselliev](https://github.com/misselliev)
+- [FelipeEnne](https://github.com/FelipeEnne)
+- [euqueme](https://github.com/euqueme)
+- [santiago-rodrig](https://github.com/santiago-rodrig)
 
-### Analyzing the Bundle Size
+## 🤝 Contributing
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
+Contributions, issues and feature requests are welcome!
 
-### Making a Progressive Web App
+Feel free to check the [issues page](issues/).
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
+## Show your support
 
-### Advanced Configuration
+Give a ⭐️ if you like this project!
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
-
-### Deployment
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-### `yarn build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+> “What simple action could you take today to produce a new momentum toward success in your life?” Tony Robbins
